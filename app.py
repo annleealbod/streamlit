@@ -10,6 +10,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+st.write("Matplotlib version:", plt.__version__)
+
 
 # In[3]:
 
