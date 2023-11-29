@@ -1,18 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-get_ipython().system('pip install nbconvert')
-
-
-# In[ ]:
-
-
-get_ipython().system('pip install streamlit')
-
-
 
 # In[2]:
 
