@@ -1,40 +1,22 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-
-# In[2]:
-
-
 import streamlit as st
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
-st.write("Matplotlib version:", plt.__version__)
-
-
-# In[3]:
-
+# Title of the app
+st.title("Simple Streamlit App")
 
 # Interactive elements
 input_data = st.slider('Select a range of values', 0.0, 100.0, (25.0, 75.0))
 checkbox = st.checkbox('Enable feature')
 
+# Function to generate data based on input
+def generate_data(input_range):
+    return np.linspace(input_range[0], input_range[1], 100)
 
-# In[ ]:
+# Calculate data based on the input
+data = generate_data(input_data)
 
-
-# Graph that updates based on input
-data = np.random.randn(100, 1) * input_data[0] + input_data[1]
-# Create the histogram using plt.hist()
-plt.hist(data, bins=20)
-
-# Display the plot using st.pyplot()
-st.pyplot()
-
-# In[ ]:
-
+# Display the graph
+st.line_chart(data)
 
 # Display other information
 st.text(f'Checkbox value: {checkbox}')
-
