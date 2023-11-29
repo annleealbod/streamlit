@@ -8,7 +8,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 # In[3]:
@@ -24,8 +23,7 @@ checkbox = st.checkbox('Enable feature')
 
 # Graph that updates based on input
 data = np.random.randn(100, 1) * input_data[0] + input_data[1]
-plt.hist(data, bins=20)
-st.pyplot()
+st.pyplot(plt.hist(data, bins=20))
 
 
 # In[ ]:
